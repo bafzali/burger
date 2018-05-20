@@ -1,0 +1,67 @@
+{{!-- <nav class="navbar navbar-light bg-light">
+  <span class="navbar-brand mb-0 h1">Eat-Da-Burger</span>
+</nav> --}}
+<main>
+  <div class="jumbotron">
+    <h1 class="display-4 text-center font-weight-bold">Eat-Da-Burger</h1>
+  </div>
+  <div class="container">
+    <div class="row">
+      <div class="col-sm">
+        <div class="card">
+          <div class="card-body">
+            <h3 class="card-title">Add a Burger to Eat</h3>
+            <div class="card-text">
+              <form class="add-burger">
+                <div class="form-group">
+                  <label for="burger_name">Burger Name:</label>
+                  <input type="text" id="burger_name" name="burger_name" aria-describedby="burgerNameHelp" placeholder="Hamburger">
+                  <small id="burgerNameHelp" class="form-text text-muted">Enter the name of the burger you would like to eat.</small>
+                </div>
+
+                <button type="submit" class="btn btn-danger">Add Burger</button>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="col-sm">
+        <div class="card">
+          <div class="card-body">
+            <h2 class="card-title">Burgers to Eat</h2>
+            <div class="card-text text-capitalize">
+              {{!-- <p>Burger text goes here.</p> --}}
+                {{#each burgers}}
+                  {{#unless devoured}}
+                  <p>
+                    <button class="devour" data-id="{{id}}" data-newStatus="{{devoured}}">
+                      Devour it!
+                    </button>
+                    {{burger_name}}
+                  </p>
+                  {{/unless}}
+                {{/each}}
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="col-sm">
+        <div class="card">
+          <div class="card-body">
+            <h2 class="card-title">Devoured Burgers</h2>
+            <div class="card-text text-capitalize">
+              {{#each burgers}}
+                  {{#if devoured}}
+                  <p>{{burger_name}}</p>
+                  {{/if}}
+                {{/each}}
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</main>
+<footer class="text-white">
+  <p>Photo by Alicia Zinn from Pexels</p>
+</footer>

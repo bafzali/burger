@@ -1,0 +1,19 @@
+body {
+  /* background-image: url("../img/burger-cheeseburger-chips-19642.jpg"); */
+  background-image: url("../img/lg-burger-161675.jpg");
+  background-size: cover;
+  background-position: center;
+  /* background-color: aquamarine; */
+}
+
+.navbar {
+  opacity: 0.75;
+}
+
+.jumbotron {
+  opacity: 0.8;
+}
+
+.card {
+  opacity: 0.85;
+}
