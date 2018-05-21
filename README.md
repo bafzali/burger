@@ -5,3 +5,6 @@ Bootstrap was used for styling.
 
 ## Node Packages Used
 express, body-parser, express-handlebars, dotenv and mysql 
+
+## Link to app
+https://burger-bafzali.herokuapp.com/
